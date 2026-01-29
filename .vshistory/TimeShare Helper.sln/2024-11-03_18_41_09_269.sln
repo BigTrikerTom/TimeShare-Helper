@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TimeShare Helper", "TimeShare Helper.vbproj", "{D9149106-BCB9-4C54-891C-3181FDB37E03}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TimeShare Error", "..\TimeShare Error\TimeShare Error.vbproj", "{E192F346-026E-4ACB-BD3D-670934F97602}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9149106-BCB9-4C54-891C-3181FDB37E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9149106-BCB9-4C54-891C-3181FDB37E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9149106-BCB9-4C54-891C-3181FDB37E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9149106-BCB9-4C54-891C-3181FDB37E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E192F346-026E-4ACB-BD3D-670934F97602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E192F346-026E-4ACB-BD3D-670934F97602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E192F346-026E-4ACB-BD3D-670934F97602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E192F346-026E-4ACB-BD3D-670934F97602}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95ED6BA7-A193-4D38-B408-EDF462908C27}
+	EndGlobalSection
+EndGlobal

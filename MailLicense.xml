@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Id>66a7bd53-fbd1-415a-b539-5e98bd57a342</Id>
+  <ProductName>Mail.dll</ProductName>
+  <SubscriptionUntil>2016-09-14</SubscriptionUntil>
+  <RegisteredTo>Time Share IT GdbR</RegisteredTo>
+  <LicenseType>single developer</LicenseType>
+  <BuyerName>Time Share IT GdbR</BuyerName>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>UDCASF3zK2aSZibXOgKdmJ8oH74=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>vHtgSH2oGNIAO6DfvKns2r4isbpVULywtKyeqpzVqtO0dqixYep6dvshLA7BWnBAjYtcUzitYzVaExKZXc4ZM29tpB1VtZjOxj51dN5urgOUwFTBpBDAEWhxp54TDZvPA32dBsED3PLNeu4zwr/sLBIEEPigNqrLGFr7iRAo0Ys=</SignatureValue>
+  </Signature>
+</License>

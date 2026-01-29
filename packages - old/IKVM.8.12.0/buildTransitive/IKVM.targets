@@ -1,0 +1,29 @@
+﻿<Project>
+    <PropertyGroup>
+        <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    </PropertyGroup>
+
+    <Target Name="ResolveIkvmRuntimeIdentifier">
+        <IkvmResolveNearestRuntimeIdentifier AvailableRuntimeIdentifiers="@(IkvmAvailableRuntimeIdentifiers, ';')" TargetRuntimeIdentifier="$(RuntimeIdentifier)">
+            <Output TaskParameter="NearestRuntimeIdentifier" PropertyName="_IkvmRuntimeIdentifier" />
+        </IkvmResolveNearestRuntimeIdentifier>
+        <ItemGroup>
+            <_IkvmRuntimeIdentifiers Include="$(_IkvmRuntimeIdentifier)" />
+            <_IkvmRuntimeIdentifiers Include="@(IkvmAvailableRuntimeIdentifiers)" Condition=" '@(_IkvmRuntimeIdentifiers)' == '' " />
+        </ItemGroup>
+    </Target>
+
+    <Target Name="IncludeIkvmNativeLibraries" BeforeTargets="AssignTargetPaths" Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net461'))">
+        <ItemGroup>
+            <_IkvmNativeLibraries Include="$(MSBuildThisFileDirectory)..\runtimes\win-x86\native\*.dll" RuntimeIdentifier="win-x86" />
+            <_IkvmNativeLibraries Include="$(MSBuildThisFileDirectory)..\runtimes\win-x64\native\*.dll" RuntimeIdentifier="win-x64" />
+            <_IkvmNativeLibraries Include="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\native\*.dll" RuntimeIdentifier="win-arm64" />
+            <None Include="@(_IkvmNativeLibraries)">
+                <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                <TargetPath>runtimes\%(_IkvmNativeLibraries.RuntimeIdentifier)\native\%(_IkvmNativeLibraries.Filename)%(_IkvmNativeLibraries.Extension)</TargetPath>
+            </None>
+        </ItemGroup>
+    </Target>
+
+    <Import Project="IKVM.IkvmReference.targets" />
+</Project>
